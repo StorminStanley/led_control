@@ -30,9 +30,9 @@ def _change_leds(red, green, blue):
     """ Change LED brightness
     """
     if _check_rgb_types(red, green, blue):
-        red = 4095*_convert_percent_to_dec(red)
-        green = 4095*_convert_percent_to_dec(green)
-        blue = 4095*_convert_percent_to_dec(blue)
+        red = int(4095*_convert_percent_to_dec(red))
+        green = int(4095*_convert_percent_to_dec(green))
+        blue = int(4095*_convert_percent_to_dec(blue))
     else:
         raise TypeError("Expected variable type INT")
 
